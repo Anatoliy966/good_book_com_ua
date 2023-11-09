@@ -14,3 +14,28 @@ class BasePageLocators:
     SEARCH_BUTTON = (By.XPATH, "//button[text()='Пошук']")
     LOGO = (By.XPATH, "//a[@class='logo']")
     HOME_PAGE = (By.XPATH, "//a[text()='Головна']")
+
+class MainPageLocators:
+    SLIDER_WRAPPER = (By.XPATH, "//div[@class='slider-wrapper']")
+    CAT_HUD_LITETATURA = (By.XPATH, "//div[@class='category-navigation-list-wrapper']//a[@href='/ua/hudozhnya-literatura']")
+    SUB_CAT_POEZIYA = (By.XPATH, "//ul[@class='top-menu']//a[@href='/ua/poeziya']")
+
+    SELECTION_NOVINKI = (By.XPATH, "//div[@class='page-body']/div[1]")
+    NOVINKI_3 = (By.XPATH, "//div[@class='page-body']/div[1]/div[2]/div[3]")
+    NOVINKI_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[1]/div[3]/h3")
+
+    SELECTION_HITY = (By.XPATH, "//div[@class='page-body']/div[2]")
+    BUTTON_PREV_HITS = (By.XPATH, "//div[@class='page-body']/div[2]/div/h2/button[@class='slick-prev slick-arrow']")
+    BUTTON_NEXT_HITS = (By.XPATH, "//div[@class='page-body']/div[2]/div/h2/button[@class='slick-next slick-arrow']")
+
+    SELECTION_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]")
+    BUTTON_PREV_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]/div/h2/button[@class='slick-prev slick-arrow']")
+    BUTTON_NEXT_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]/div/h2/button[@class='slick-next slick-arrow']")
+
+    SELECTION_POPULAR_AUTOR = (By.XPATH, "//div[@class='page-body']/div[5]")
+    POPULAR_AUTOR_4 = (By.XPATH, "//div[@class='page-body']/div[5]/div[2]/div[4]")
+    POPULAR_AUTOR_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[5]/div[3]/h4")
+
+    SELECTION_POPULAR_SERII = (By.XPATH, "//div[@class='page-body']/div[6]")
+    POPULAR_SERII_4 = (By.XPATH, "//div[@class='page-body']/div[6]/div[2]/div[2]")
+    POPULAR_SERII_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[6]/div[3]/h4")
