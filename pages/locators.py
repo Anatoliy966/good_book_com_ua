@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
-    ACCOUNT = (By.XPATH, "//*[text()='Аккаунт']")
+    ACCOUNT = (By.XPATH, "//label[text()='Аккаунт']")
     REGISTER = (By.XPATH, "//a[text()='Реєстрація']")
     LOGIN = (By.XPATH, "//a[text()='Увійти']")
     WISH_LIST = (By.XPATH, "//a[text()='Список побажань']")
