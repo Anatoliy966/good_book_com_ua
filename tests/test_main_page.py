@@ -24,6 +24,25 @@ class TestMainPage:
         page.is_button_login()
         page.is_button_wish_list()
         page.is_cart_show()
+        page.is_language_ua()
+        page.is_language_ru()
+        page.is_search_field()
+        page.is_search_button()
+        page.is_logo()
+        page.is_home_page()
+        page.is_oplata_i_dostavka()
+        page.is_novinki()
+        page.is_bestsellery()
+        page.is_kontakty()
+        page.is_number_telephone()
+        page.is_logo_viber()
+        page.is_logo_telegram()
+        page.is_info_date_time()
+        page.is_info_date_delivery()
+
+
+
+
 
 
 
