@@ -1,6 +1,7 @@
 import pytest
 from ..pages.base_page import BasePage
 from ..pages.main_page import MainPage
+import random
 from ..settings import sets
 # Две точки означают абсолютный путь. Без них в виндовс будет ошибка. В линукс - скорее всего их надо будет убрать
 # ..settings надо поставить и в base_page.py
@@ -11,7 +12,8 @@ from ..settings import sets
 class TestMainPage:
 
     def setup_method(self):
-        pass
+        hash_name = "%032x" % random.getrandbits(128)
+        self.email_for_subscribe = f"{hash_name}@mail.com"
 
     def test_get_main_page(self, browser):
         page = BasePage(browser, sets.PROD_SERVER)
@@ -20,6 +22,7 @@ class TestMainPage:
     def test_main_page_header(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
+        page.is_account_category()
         page.is_button_register()
         page.is_button_login()
         page.is_button_wish_list()
@@ -39,6 +42,38 @@ class TestMainPage:
         page.is_logo_telegram()
         page.is_info_date_time()
         page.is_info_date_delivery()
+
+
+    def test_main_page_content(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.is_slider_wrapper()
+        page.is_cat_hud_literatura()
+        page.is_sub_cat_poeziya()
+        page.is_selection_novinki()
+        page.is_novinki_3()
+        page.is_novinki_show_more()
+
+        page.is_selection_hity()
+        page.is_button_prev_hits()
+        page.is_button_next_trend()
+
+        page.is_selection_hity()
+        page.is_button_prev_hits()
+
+        page.is_selection_bestseller()
+        page.is_button_prev_bestseller()
+        page.is_button_next_bestseller()
+
+        page.is_selection_popular_autor()
+        page.is_popular_autor_4()
+        page.is_popular_autor_show_more()
+        page.is_selection_popular_serii()
+        page.is_popular_serii_4()
+        page.is_popular_serii_show_more()
+
+
+
 
 
 

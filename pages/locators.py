@@ -26,15 +26,13 @@ class BasePageLocators:
 
 class MainPageLocators:
     SLIDER_WRAPPER = (By.XPATH, "//div[@class='slider-wrapper']")
-    CAT_HUD_LITETATURA = (By.XPATH, "//div[@class='category-navigation-list-wrapper']//a[@href='/ua/hudozhnya-literatura']")
+    CAT_HUD_LITETATURA = (By.XPATH, "//div[@class='category-navigation-list-wrapper']//*[text()='Художня література']")
     SUB_CAT_POEZIYA = (By.XPATH, "//ul[@class='top-menu']//a[@href='/ua/poeziya']")
-
     SELECTION_NOVINKI = (By.XPATH, "//div[@class='page-body']/div[1]")
     NOVINKI_3 = (By.XPATH, "//div[@class='page-body']/div[1]/div[2]/div[3]")
     NOVINKI_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[1]/div[3]/h3")
-
     SELECTION_HITY = (By.XPATH, "//div[@class='page-body']/div[2]")
-    BUTTON_PREV_HITS = (By.XPATH, "//div[@class='page-body']/div[2]/div/h2/button[@class='slick-prev slick-arrow']")
+    BUTTON_PREV_HITS = (By.XPATH, "//div[@id='jcarousel-3-305']//button[text()='Previous']")
     BUTTON_NEXT_HITS = (By.XPATH, "//div[@class='page-body']/div[2]/div/h2/button[@class='slick-next slick-arrow']")
 
     SELECTION_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]")
@@ -48,3 +46,33 @@ class MainPageLocators:
     SELECTION_POPULAR_SERII = (By.XPATH, "//div[@class='page-body']/div[6]")
     POPULAR_SERII_4 = (By.XPATH, "//div[@class='page-body']/div[6]/div[2]/div[2]")
     POPULAR_SERII_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[6]/div[3]/h4")
+
+
+class SignupLoginPageLocators:
+    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@id='FirstName']")
+    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@id='LastName']")
+    REG_INPUT_EMAIL = (By.XPATH, "//input[@id='Email']")
+    REG_INPUT_PHONE = (By.XPATH, "//input[@id='Phone']")
+    REG_INPUT_PASSWORD = (By.XPATH, "//input[@id='Password']")
+    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@id='ConfirmPassword']")
+    BUTTON_REGISTER = (By.XPATH, "//button[@id='register-button']")
+
+    LOGIN_INPUT_EMAIL = (By.XPATH, "//input[@class='email']")
+    LOGIN_INPUT_PASSWORD = (By.XPATH, "//input[@class='password']")
+    BUTTON_LOGIN = (By.XPATH, "//button[text()='Увійти']")
+
+class OrderPageLocators:
+    BUTTON_PRODUCT = (By.XPATH, "//button[@data-productid='23269']")
+    BUTTON_WRAPPER = (By.XPATH, "//div[@class='checkoutButtonWrapper']//button[text()='Оформлення замовлення']")
+
+
+class CabinetPageLocators:
+    pass
+
+
+class CategoryPageLocators:
+    pass
+
+
+class SearchPageLocators:
+    pass
