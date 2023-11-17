@@ -32,8 +32,8 @@ class MainPageLocators:
     NOVINKI_3 = (By.XPATH, "//div[@class='page-body']/div[1]/div[2]/div[3]")
     NOVINKI_SHOW_MORE = (By.XPATH, "//div[@class='page-body']/div[1]/div[3]/h3")
     SELECTION_HITY = (By.XPATH, "//div[@class='page-body']/div[2]")
-    BUTTON_PREV_HITS = (By.XPATH, "//div[@id='jcarousel-3-305']//button[text()='Previous']")
-    BUTTON_NEXT_HITS = (By.XPATH, "//div[@class='page-body']/div[2]/div/h2/button[@class='slick-next slick-arrow']")
+    BUTTON_PREV_HITS = (By.XPATH, "//div[@class='jCarouselMainWrapper'][1]//button[@class='slick-prev slick-arrow']")
+    BUTTON_NEXT_HITS = (By.XPATH, "//div[@class='jCarouselMainWrapper'][1]//button[@class='slick-next slick-arrow']")
 
     SELECTION_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]")
     BUTTON_PREV_BESTSELER = (By.XPATH, "//div[@class='page-body']/div[3]/div/h2/button[@class='slick-prev slick-arrow']")
@@ -49,13 +49,13 @@ class MainPageLocators:
 
 
 class SignupLoginPageLocators:
-    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@id='FirstName']")
-    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@id='LastName']")
-    REG_INPUT_EMAIL = (By.XPATH, "//input[@id='Email']")
-    REG_INPUT_PHONE = (By.XPATH, "//input[@id='Phone']")
-    REG_INPUT_PASSWORD = (By.XPATH, "//input[@id='Password']")
-    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@id='ConfirmPassword']")
-    BUTTON_REGISTER = (By.XPATH, "//button[@id='register-button']")
+    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@name='FirstName']")
+    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@name='LastName']")
+    REG_INPUT_EMAIL = (By.XPATH, "//input[@name='Email']")
+    REG_INPUT_PHONE = (By.XPATH, "//input[@name='Phone']")
+    REG_INPUT_PASSWORD = (By.XPATH, "//input[@name='Password']")
+    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@name='ConfirmPassword']")
+    BUTTON_REGISTER = (By.XPATH, "//button[@name='register-button']")
 
     LOGIN_INPUT_EMAIL = (By.XPATH, "//input[@class='email']")
     LOGIN_INPUT_PASSWORD = (By.XPATH, "//input[@class='password']")
