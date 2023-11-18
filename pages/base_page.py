@@ -32,6 +32,14 @@ class BasePage:
     def refresh(self):
         self.browser.refresh()
 
+    def scroll_page(self):
+        # self.browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+        y = 500
+        for timer in range(0, 50):
+            self.browser.execute_script("window.scrollTo(0, " + str(y) + ")")
+            y += 500
+            time.sleep(1)
+
     def is_element_present(self, how, what):
         try: self.browser.find_element(how, what)
         except NoSuchElementException: return False
@@ -86,3 +94,15 @@ class BasePage:
 
     def logout_from_cabinet(self):
         pass
+
+
+
+    # def scroll_page(self, scrl):  # разовий скрол на потрібний рядок сторінки (в пікселях)
+    #     self.browser.execute_script("window.scrollTo(0," + str(scrl) + ")")
+    #
+    # def qty_of_elements(self, how, what):  # повертає кількість елементів за однаковим локатором
+    #     try:
+    #         qty = len(self.browser.find_elements(how, what))
+    #     except NoSuchElementException:
+    #         return False
+    #     return qty

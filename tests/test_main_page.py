@@ -55,6 +55,7 @@ class TestMainPage:
         page.is_novinki_show_more()
 
         page.is_selection_hity()
+        page.scroll_page()
         page.is_button_prev_hits()
         page.is_button_next_trend()
 
@@ -72,6 +73,12 @@ class TestMainPage:
         page.is_popular_serii_4()
         page.is_popular_serii_show_more()
 
+    def test_main_page_footer(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.is_button_subscribe()
+        page.is_input_subscribe()
+        # page.subscribe_action()
 
 
 

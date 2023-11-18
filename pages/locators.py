@@ -24,6 +24,12 @@ class BasePageLocators:
     INFO_DATE_TIME = (By.XPATH, "//div[@class='admin-header-links my-modile']//span[text()='Вт-Вс 10:00-16:00']")
     INFO_DELIVERY = (By.XPATH, "//div[@class='admin-header-links my-modile']//span[text()='Доставка по всей Украине']")
 
+    FOOTER_SUBSCRIBE = (By.XPATH, "//button[text()='Підписатися']")
+    FOOTER_INPUT_SUBSCRIBE = (By.XPATH, "//input[@name='NewsletterEmail']")
+
+    # ALERT_SUCCESS = (By.XPATH, "//div[@id='alert-success']")
+    # ALERT_ERROR = (By.XPATH, "//div[@id='alert-error']")
+
 class MainPageLocators:
     SLIDER_WRAPPER = (By.XPATH, "//div[@class='slider-wrapper']")
     CAT_HUD_LITETATURA = (By.XPATH, "//div[@class='category-navigation-list-wrapper']//*[text()='Художня література']")
@@ -49,13 +55,13 @@ class MainPageLocators:
 
 
 class SignupLoginPageLocators:
-    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@name='FirstName']")
-    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@name='LastName']")
-    REG_INPUT_EMAIL = (By.XPATH, "//input[@name='Email']")
-    REG_INPUT_PHONE = (By.XPATH, "//input[@name='Phone']")
-    REG_INPUT_PASSWORD = (By.XPATH, "//input[@name='Password']")
-    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@name='ConfirmPassword']")
-    BUTTON_REGISTER = (By.XPATH, "//button[@name='register-button']")
+    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@id='FirstName']")
+    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@id='LastName']")
+    REG_INPUT_EMAIL = (By.XPATH, "//input[@id='Email']")
+    REG_INPUT_PHONE = (By.XPATH, "//input[@id='Phone']")
+    REG_INPUT_PASSWORD = (By.XPATH, "//input[@id='Password']")
+    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@id='ConfirmPassword']")
+    BUTTON_REGISTER = (By.XPATH, "//button[@id='register-button']")
 
     LOGIN_INPUT_EMAIL = (By.XPATH, "//input[@class='email']")
     LOGIN_INPUT_PASSWORD = (By.XPATH, "//input[@class='password']")

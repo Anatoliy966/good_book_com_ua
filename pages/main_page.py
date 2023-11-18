@@ -210,25 +210,33 @@ class MainPage(base_page.BasePage):
             "The element 'POPULAR_SERII_SHOW_MORE' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-
-
-
-    def is_selection_hity(self):
-        assert self.is_element_present(*locators.MainPageLocators.SELECTION_HITY), \
-                "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_prev_hits(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_PREV_HITS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
     def is_button_next_trend(self):
         assert self.is_element_present(*locators.MainPageLocators.BUTTON_NEXT_HITS), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
+    def is_button_subscribe(self):
+        assert self.is_element_present(*locators.BasePageLocators.FOOTER_SUBSCRIBE), \
+            "The element subscribe is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
 
+    def is_input_subscribe(self):
+        assert self.is_element_present(*locators.BasePageLocators.FOOTER_INPUT_SUBSCRIBE), \
+            "The element subscribe is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def subscribe_action(self, email):
+        assert self.input_data(*locators.BasePageLocators.FOOTER_INPUT_SUBSCRIBE, email), \
+            "The element is not present"
+        self.explicit_wait(5) # добавили ожидание 5 секунд
+        assert self.click_element(*locators.BasePageLocators.FOOTER_SUBSCRIBE), \
+            "The element is not present or intractable"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    # def is_allert_succers_after_sbscr(self):
+    #     assert self.is_element_appears_after_while(*locators.BasePageLocators.ALERT_SUCCESS, timeout=5), \
+    #         "The element is not present"
+    #     print(f"{inspect.currentframe().f_code.co_name} - OK")
 
 
 
