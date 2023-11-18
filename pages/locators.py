@@ -27,6 +27,7 @@ class BasePageLocators:
     FOOTER_SUBSCRIBE = (By.XPATH, "//button[text()='Підписатися']")
     FOOTER_INPUT_SUBSCRIBE = (By.XPATH, "//input[@name='NewsletterEmail']")
 
+
     # ALERT_SUCCESS = (By.XPATH, "//div[@id='alert-success']")
     # ALERT_ERROR = (By.XPATH, "//div[@id='alert-error']")
 
