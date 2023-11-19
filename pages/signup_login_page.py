@@ -3,6 +3,7 @@ import inspect
 
 
 class SignupLoginPage(base_page.BasePage):
+    # Регистрация нового пользователя
     def click_button_register(self):
         assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
             "Element 'Аккаунт' is not present"
@@ -62,11 +63,15 @@ class SignupLoginPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_alert_account_test(self):
+        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
+            "Element 'Аккаунт' is not present"
         assert self.is_element_present(*locators.SignupLoginPageLocators.ALERT_ACCOUNT_TEST), \
             "The element login is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_alert_account_vyhod(self):
+        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
+            "Element 'Аккаунт' is not present"
         assert self.is_element_present(*locators.SignupLoginPageLocators.ALERT_ACCOUNT_VYHOD), \
             "The element login is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
@@ -76,108 +81,55 @@ class SignupLoginPage(base_page.BasePage):
             "The element currency is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-
-    def click_menu_login(self):
+    # Выход из аккаунта
+    def click_button_logout(self):
         assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
             "Element 'Аккаунт' is not present"
-        assert self.click_element(*locators.BasePageLocators.MENU_LOGIN), \
+        assert self.click_element(*locators.SignupLoginPageLocators.ACCOUNT_VYHOD), \
             "The element MENU_LOGIN is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_h1_vhod(self):
-        assert self.is_element_present(*locators.LoginPageLocators.H1_LOGIN), \
+    def is_button_register(self):
+        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
+            "Element 'Аккаунт' is not present"
+        assert self.is_element_present(*locators.BasePageLocators.REGISTER), \
+            "Button 'Реєстрація' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - Ok")
+
+    def is_button_login(self):
+        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
+            "Element 'Аккаунт' is not present"
+        assert self.is_element_present(*locators.BasePageLocators.LOGIN), \
+                "Button 'Увійти' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - Ok")
+
+    # Вход зарегистрированного пользователя
+    def click_button_login(self):
+        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
+            "Element 'Аккаунт' is not present"
+        assert self.click_element(*locators.BasePageLocators.LOGIN), \
+            "The element MENU_LOGIN is not present or intractable"
+        print(f"{inspect.currentframe().f_code.co_name} - Ok")
+
+    def is_h1_login(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.H1_LOGIN), \
+            "The element login is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - Ok")
+
+    def is_h2_login(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.H2_LOGIN), \
             "The element login is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def input_email_password(self, email, password):
-        assert self.input_data(*locators.LoginPageLocators.INPUT_EMAIL, email), \
+        assert self.input_data(*locators.SignupLoginPageLocators.LOGIN_INPUT_EMAIL, email), \
             "The element currency is not present"
-        assert self.input_data(*locators.LoginPageLocators.INPUT_PASSWORD, password), \
+        assert self.input_data(*locators.SignupLoginPageLocators.LOGIN_INPUT_PASSWORD, password), \
             "The element currency is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def press_button_login(self):
-        assert self.click_element(*locators.LoginPageLocators.BUTTON_LOGIN), \
+        assert self.click_element(*locators.SignupLoginPageLocators.BUTTON_LOGIN), \
             "The element currency is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_logout_in_header(self):
-        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
-            "Element 'Аккаунт' is not present"
-        assert self.is_element_present(*locators.BasePageLocators.MENU_LOGOUT), \
-            "Button MENU_LOGOUT is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def press_button_logout(self):
-        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
-            "Element 'Аккаунт' is not present"
-        assert self.click_element(*locators.BasePageLocators.MENU_LOGOUT), \
-            "Button MENU_LOGOUT is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_menu_login(self):
-        assert self.hover_action(*locators.BasePageLocators.ACCOUNT), \
-            "Element 'Аккаунт' is not present"
-        assert self.is_element_present(*locators.BasePageLocators.MENU_LOGIN), \
-            "The element MENU_LOGIN is not present or intractable"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    # def input_email_password(self, email, password):
-    #     assert self.input_data(*locators.SignupLoginPageLocators.INPUT_EMAIL, email), \
-    #         "The element currency is not present"
-    #     assert self.input_data(*locators.SignupLoginPageLocators.INPUT_PASSWORD, password), \
-    #         "The element currency is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-
-    #
-    #
-    # def is_h1_vhod(self):
-    #     assert self.is_element_present(*locators.SignupLoginPageLocators.H1_VHOD), \
-    #         "Button login is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def press_button_login(self):
-    #     assert self.click_element(*locators.SignupLoginPageLocators.BUTTON_LOGIN), \
-    #         "The element currency is not present or intractable"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def click_signup(self):
-    #     assert self.click_element(*locators.SignupLoginPageLocators.GO_TO_SIGNUP), \
-    #         "The element currency is not present or intractable"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def is_h1_signup(self):
-    #     assert self.is_element_present(*locators.SignupLoginPageLocators.H1_SIGNUP), \
-    #         "Button login is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def input_email_password(self, email, password):
-    #     assert self.input_data(*locators.SignupLoginPageLocators.INPUT_EMAIL, email), \
-    #         "The element currency is not present"
-    #     assert self.input_data(*locators.SignupLoginPageLocators.INPUT_PASSWORD, password), \
-    #         "The element currency is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def press_button_signup(self):
-    #     assert self.click_element(*locators.SignupLoginPageLocators.BUTTON_SIGNUP), \
-    #         "The element currency is not present or intractable"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def is_alert_success(self):
-    #     assert self.is_element_appears_after_while(*locators.BasePageLocators.ALERT_SUCCESS, timeout=5), \
-    #         "The element is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def is_button_logout_in_header(self):
-    #     assert self.is_element_present(*locators.BasePageLocators.LOGOUT), \
-    #         "Button login is not present"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-    #
-    # def press_button_logout(self):
-    #     assert self.click_element(*locators.BasePageLocators.LOGOUT), \
-    #         "The element currency is not present or intractable"
-    #     print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-
 
