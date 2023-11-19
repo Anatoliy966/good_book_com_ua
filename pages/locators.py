@@ -56,13 +56,21 @@ class MainPageLocators:
 
 
 class SignupLoginPageLocators:
-    REG_INPUT_FIRST_NAME = (By.XPATH, "//input[@id='FirstName']")
-    REG_INPUT_LAST_NAME = (By.XPATH, "//input[@id='LastName']")
+    H1_REGISTRATION = (By.XPATH, "//h1[text() = 'Реєстрація']")
+    YOUR_PERSONAL_DATA = (By.XPATH, "//strong[text() = 'Ваші особисті дані']")
+    REG_INPUT_FIRSTNAME = (By.XPATH, "//input[@name='FirstName']")
+    REG_INPUT_LASTNAME = (By.XPATH, "//input[@id='LastName']")
     REG_INPUT_EMAIL = (By.XPATH, "//input[@id='Email']")
-    REG_INPUT_PHONE = (By.XPATH, "//input[@id='Phone']")
-    REG_INPUT_PASSWORD = (By.XPATH, "//input[@id='Password']")
-    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@id='ConfirmPassword']")
+    CONTACT_INFORMATION = (By.XPATH, "//*[text()='Контактна інформація']")
+    REG_INPUT_PHONE = (By.XPATH, "//input[@name='Phone']")
+    YOUR_PASSWORD = (By.XPATH, "//*[text()='Ваш пароль']")
+    REG_INPUT_PASSWORD = (By.XPATH, "//input[@name='Password']")
+    REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@name='ConfirmPassword']")
     BUTTON_REGISTER = (By.XPATH, "//button[@id='register-button']")
+    ALERT_REGISTER = (By.XPATH, "//div[text()='Реєстрація завершена']")
+    ALERT_ACCOUNT_TEST = (By.XPATH, "//a[text()='Usertest']")
+    ALERT_ACCOUNT_VYHOD = (By.XPATH, "//a[text()='Выйти']")
+    BUTTON_CONTINUE = (By.XPATH, "//a[text()='Продовжити']")
 
     LOGIN_INPUT_EMAIL = (By.XPATH, "//input[@class='email']")
     LOGIN_INPUT_PASSWORD = (By.XPATH, "//input[@class='password']")
