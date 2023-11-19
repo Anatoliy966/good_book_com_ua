@@ -14,8 +14,8 @@ class TestSignupLoginLogautPage:
         hash_name = "%064x" % random.getrandbits(128)
         self.email_for_register = f"{hash_name}@mail.com"
         self.password_for_register = "Qwerty54321"
-        self.firstname_for_register = "Usertest"
-        self.lastname_for_register = "Userstests"
+        self.firstname_for_register = "test"
+        self.lastname_for_register = "tests"
         self.phone_for_register = "+380501234567"
 
     def test_get_main_page(self, browser):
@@ -38,46 +38,35 @@ class TestSignupLoginLogautPage:
         page.explicit_wait(5)
         page.press_button_register()
         page.is_alert_register()
+        page.explicit_wait(5)
         page.is_alert_account_test()
+        page.explicit_wait(5)
         page.is_alert_account_vyhod()
+        page.explicit_wait(5)
         page.press_button_continue()
         page.explicit_wait(5)
 
+    def test_logout_page(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
+        page.click_button_logout()
+        page.explicit_wait(3)
+        page.is_button_register()
+        page.is_button_login()
+        page.explicit_wait(3)
 
-
-
-
-
-
-
-
-
-
-    #     page.input_email_password(self.email_for_signup, self.password_for_signup)
-    #     page.press_button_signup()
-    #     page.is_alert_success()
-    #
-    # def test_login_page(self, browser):
-    #     self.link_to_cabinet = browser.current_url
-    #     page = SignupLoginPage(browser, self.link_to_cabinet)
-    #     page.click_button_signup_login()
-    #     page.explicit_wait(2)
-    #     page.is_h1_vhod()
-    #     page.input_email_password(sets.TEST_EMAIL, sets.PASSWORD)
-    #     page.press_button_login()
-    #     page.is_alert_success()
-    #     page.is_button_logout_in_header()
-    #
-    # def test_logout_page(self, browser):
-    #     self.link_to_cabinet = browser.current_url
-    #     page = SignupLoginPage(browser, self.link_to_cabinet)
-    #     page.press_button_logout()
-    #     page.explicit_wait(2)
-    #     page = MainPage(browser, self.link_to_cabinet)
-    #     page.is_button_login()
-    #
-    #
-    #
-
-
+    def test_login_page(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
+        page.click_button_login()
+        page.explicit_wait(5)
+        page.is_h1_login()
+        page.is_h2_login()
+        page.input_email_password(sets.TEST_EMAIL, sets.PASSWORD)
+        page.explicit_wait(5)
+        page.press_button_login()
+        page.is_alert_account_test()
+        page.explicit_wait(5)
+        page.is_alert_account_vyhod()
+        page.explicit_wait(5)
 
