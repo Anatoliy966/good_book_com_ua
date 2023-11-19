@@ -40,6 +40,7 @@ class TestSignupLoginLogautPage:
         page.is_alert_register()
         page.is_alert_account_test()
         page.is_alert_account_vyhod()
+        page.press_button_continue()
         page.explicit_wait(5)
 
 
