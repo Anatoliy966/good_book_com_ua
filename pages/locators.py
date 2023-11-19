@@ -68,13 +68,20 @@ class SignupLoginPageLocators:
     REG_INPUT_CONFIRM_PASSWORD = (By.XPATH, "//input[@name='ConfirmPassword']")
     BUTTON_REGISTER = (By.XPATH, "//button[@id='register-button']")
     ALERT_REGISTER = (By.XPATH, "//div[text()='Реєстрація завершена']")
-    ALERT_ACCOUNT_TEST = (By.XPATH, "//a[text()='Usertest']")
+    ALERT_ACCOUNT_TEST = (By.XPATH, "//a[text()='test']")
     ALERT_ACCOUNT_VYHOD = (By.XPATH, "//a[text()='Выйти']")
     BUTTON_CONTINUE = (By.XPATH, "//a[text()='Продовжити']")
 
+    ACCOUNT_VYHOD = (By.XPATH, "//a[text()='Выйти']")
+
+    H1_LOGIN = (By.XPATH, "//h1[text()='Ласкаво просимо! Будь ласка, увійдіть.']")
+    H2_LOGIN = (By.XPATH, "//strong[text()='Зареєстрований клієнт']")
     LOGIN_INPUT_EMAIL = (By.XPATH, "//input[@class='email']")
     LOGIN_INPUT_PASSWORD = (By.XPATH, "//input[@class='password']")
     BUTTON_LOGIN = (By.XPATH, "//button[text()='Увійти']")
+
+
+
 
 class OrderPageLocators:
     BUTTON_PRODUCT = (By.XPATH, "//button[@data-productid='23269']")
