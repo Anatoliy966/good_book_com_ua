@@ -66,30 +66,3 @@ class TestOrderPage:
         page.explicit_wait(5)
         page.is_press_button_oformyty_zamovl()
         page.explicit_wait(10)
-
-    #
-    # def test_in_cart_and_checkout(self, browser):
-    #     self.link_to_cabinet = browser.current_url
-    #     page = OrderPage(browser, self.link_to_cabinet)
-    # #    global price_1_product
-    # #    price_1_product = page.add_to_cart_first_product()
-    #     page.is_del_1_product_in_cart()
-    #     page.is_change_quantity_2_product()
-    #     page.explicit_wait(3)
-    #     page.is_press_button_update_cart()
-    #     page.is_press_button_checkout()
-    #     page.explicit_wait(15)
-    #
-    #     page.is_press_button_post()
-    #     page.is_press_city_search()
-    #     page.input_search_field_city(sets.SEARCH_FIELD_CITY)
-    #     page.explicit_wait(3)
-    #     page.is_press_city_result_search()
-    #     page.is_press_placeholder_search()
-    #     page.explicit_wait(3)
-    #     page.is_press_selected_placeholder()
-    #     page.is_press_button_postpaid()
-    #     page.explicit_wait(5)
-    #     page.is_press_button_place_order()
-    #     page.explicit_wait(10)
-    #
