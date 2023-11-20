@@ -81,11 +81,54 @@ class SignupLoginPageLocators:
     BUTTON_LOGIN = (By.XPATH, "//button[text()='Увійти']")
 
 
-
-
 class OrderPageLocators:
-    BUTTON_PRODUCT = (By.XPATH, "//button[@data-productid='23269']")
-    BUTTON_WRAPPER = (By.XPATH, "//div[@class='checkoutButtonWrapper']//button[text()='Оформлення замовлення']")
+    # Покупки
+    PRODUCT_1 = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][4]")
+    BUTTON_ADD_PRODUCT_1 = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][4]//span[text() ='У кошик']")
+    PRICE_PRODUCT_1 = (By.XPATH, "//strong[@class='price']")
+    BUTTON_WRAPPER_1 = (By.XPATH, "//div[@class='k-widget k-window ajaxCart']//button[text()='Оформлення замовлення']")
+    LINK_PRODOVJYTY_1 = (By.XPATH, "//div[@class='productAddedToCartWindowSummary']//a[@href='#']")
+
+    PRODUCT_2 = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][8]")
+    BUTTON_ADD_PRODUCT_2 = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][8]//span[text() ='У кошик']")
+    PRICE_PRODUCT_2 = (By.XPATH, "//strong[@class='price']")
+    BUTTON_WRAPPER_2 = (By.XPATH, "//div[@class='k-widget k-window ajaxCart']//button[text()='Оформлення замовлення']")
+    LINK_PRODOVJYTY_2 = (By.XPATH, "//div[@class='productAddedToCartWindowSummary']//a[@href='#']")
+
+    POP_AUTOR = (By.XPATH, "//img[@alt='Книги Пастуро Мишель']")
+    ALERT_POP_AUTOR = (By.XPATH, "//h1[text()='Книги автора Пастуро Мішель']")
+    PRODUCT_3 = (By.XPATH, "//div[@class='product-grid']//div[@class='item-box'][5]")
+    BUTTON_ADD_PRODUCT_3 = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][5]//span[text() ='У кошик']")
+    PRICE_PRODUCT_3 = (By.XPATH, "//strong[@class='price']")
+    BUTTON_WRAPPER_3 = (By.XPATH, "//div[@class='k-widget k-window ajaxCart']//button[text()='Оформлення замовлення']")
+    LINK_PRODOVJYTY_3 = (By.XPATH, "//div[@class='productAddedToCartWindowSummary']//a[@href='#']")
+
+    BUTTON_CARD = (By.XPATH, "//div[@class='flyout-cart-wrapper']")
+
+    DELETE_PRODUCT_2 = (By.XPATH, "//td[@class='remove-from-cart']//input[@name='removefromcart']")
+    ALERT_CARD = (By.XPATH, "//div[@class='flyout-cart-wrapper']//span[text()='(2)']")
+
+    # Оформлення замовлення
+    BUTTON_ORDER = (By.XPATH, "//div[@class='checkout-buttons']//button[@class='button-1 checkout-button']")
+    ALERT_ORDER = (By.XPATH, '//div[@class="page-title"]')
+    BUTTON_POSHTA = (By.XPATH, '//input[@value="post"]')
+    SEARCH_CITY = (By.XPATH, '//span[@aria-labelledby="select2-js-data-example-ajax-container"]')
+    FIELD_SEARCH_CITY = (By.XPATH, '//input[@class="select2-search__field"]')
+    SELECT_SEARCH_RESULT = (By.XPATH, '//ul[@class="select2-results__options"]')
+    FIELD_SEARCH_VIDDILENNYA = (By.XPATH, '//span[@class="select2-selection__placeholder"]')
+    SELECT_SEARCH_POSHTA = (By.XPATH, '//li[@class="select2-results__option"][4]')
+    PISLYAOPLATA = (By.XPATH, '//input[@id="paymentmethod_1"]')
+    BUTTON_OFORMYTY_ZAMOVL = (By.XPATH, '//button[@data-complete="Оформити замовлення"]')
+
+
+class WishListLocators:
+    # Список побажань
+    SPYSOK_POBAJAN = (By.XPATH, "//div[@class='product-grid'][1]//div[@class='item-box'][6]//button[text() ='Додати до списку побажань']")
+    BUTTON_SPYSOK_POBAJAN = (By.XPATH, "//div[@class='k-widget k-window ajaxCart']//button[text()='Список побажань']")
+    ALERT_LIST_SPYSOK_POBAJAN = (By.XPATH, "//div[@class='master-column-wrapper']//h1[text()='Список побажань']")
+    ALERT_ACCOUNT = (By.XPATH, "//div[@class='header-links']//span[text()='Список побажань']")
+    BUTTON_DELETE_POBAJAN = (By.XPATH, "//td[@class='remove-from-cart']//input[@aria-label='прибрати']")
+    ALERT_LIST_POBAJAN = (By.XPATH, "//div[@class='master-column-wrapper']//div[@class='no-data']")
 
 
 class CabinetPageLocators:
