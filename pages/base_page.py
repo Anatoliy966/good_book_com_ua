@@ -95,7 +95,8 @@ class BasePage:
     def logout_from_cabinet(self):
         pass
 
-
+    def make_screenshot(self, method_name):
+        self.browser.find_element(By.TAG_NAME, 'body').screenshot(f"{method_name}.png")
 
     # def scroll_page(self, scrl):  # разовий скрол на потрібний рядок сторінки (в пікселях)
     #     self.browser.execute_script("window.scrollTo(0," + str(scrl) + ")")
